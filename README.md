@@ -1,4 +1,55 @@
-## VLBiasBench: A large-scale dataset composed of high-quality synthetic images aimed at evaluating social biases in LVLMs 
+
+## VLBiasBench
+
+**VLBiasBench** is a large-scale benchmark dataset composed of high-quality synthetic images, designed to evaluate social biases in Large Vision-Language Models (LVLMs).
+
+---
+
+### Running the Close-Ended Evaluation
+
+Follow the steps below to run the close-ended evaluation for a specific model:
+
+1. **Download the Evaluation Datasets**  
+   Download both the close-ended and open-ended datasets from the following link:  
+   [Google Drive - VLBiasBench Datasets](https://drive.google.com/drive/folders/1YJx-6zCd506Xbm8rUtELKrRMp6nZbRuV)  
+   Place the downloaded contents under the `evaluation/data/` directory.
+
+2. **Set Up Your Python Environment**  
+   - Use Python 3.11.  
+   - Create and activate a virtual environment:
+     ```bash
+     python3.11 -m venv venv
+     source venv/bin/activate
+     pip install -r requirements.txt
+     ```
+
+3. **Install CUDA Toolkit (v12.6)**  
+   Make sure CUDA Toolkit version 12.6 is installed and properly configured on your system for GPU acceleration.
+
+
+4. **Download the Model to Evaluate**  
+   - Create a model download script in `evaluation/model_download_scripts/`.
+   - Use the provided `download_blip_blip2-opt-2.7b.py` as a reference for formatting your script.
+   - Run the script with:
+        ```bash
+        python evaluation/model_download_scripts/<your_script_name>.py
+        ```
+
+5. **Set the Working Directory**  
+   Change your current working directory to the `evaluation/` folder:
+   ```bash
+   cd evaluation
+   ```
+
+6. **Run the Evaluation**
+   Execute the close-ended evaluation with your desired model:
+
+   ```bash
+   python run_evaluation.py --model_name <model-name> --dataset_list 'close_ended_dataset'
+   ```
+
+---
+
 
 ### Overview🔍
 

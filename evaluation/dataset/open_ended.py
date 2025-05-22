@@ -14,9 +14,9 @@ class open_ended_dataset(BaseDataset):
         self.type = type
         if "profession" in self.type:
             self.input_json = os.path.join(self.data_root,
-                                           'open_ended/profession/annotation_{}.json'.format(self.type.split('-')[1]))
+                                           'open-ended/profession/annotation_{}.json'.format(self.type.split('-')[1]))
         else:
-            self.input_json = os.path.join(self.data_root, 'open_ended/{}/annotation.json'.format(self.type))
+            self.input_json = os.path.join(self.data_root, 'open-ended/{}/annotation.json'.format(self.type))
         with open(self.input_json, 'r') as file:
             self.data = json.load(file)
         self.num_samples = len(self.data)
