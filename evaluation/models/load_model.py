@@ -59,6 +59,9 @@ def load_model(model_name, **kwargs):
     elif model_name == 'sd-1.5-ti2i':
         from .SD_1_5_load import SD_1_5
         model = SD_1_5(mode='ti2i', **kwargs)
+    elif model_name == "gemma-3-4b":
+        from .gemma_load import Gemma3
+        model = Gemma3(model_name="gemma-3-4b", **kwargs)
     else:
         raise NotImplementedError(f"{model_name} not implemented")
     return model

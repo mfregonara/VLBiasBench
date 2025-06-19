@@ -172,8 +172,28 @@ emu2-chat:
     low_memory: True
 
 
+# ---------- Gemma 3 -----------
+gemma-3-4b:
+    do_sample: True
+    num_beams: 1
+    temperature: 0.7
+    max_new_tokens: 512
+    top_p: 0.9
+    top_k: 50
+    length_penalty: 1.0
+    inst_pre: ""
+    inst_suff: ""
 
-
+gemma-3-12b:
+    do_sample: True
+    num_beams: 1
+    temperature: 0.7
+    max_new_tokens: 512
+    top_p: 0.9
+    top_k: 50
+    length_penalty: 1.0
+    inst_pre: ""
+    inst_suff: ""
 
 
 # ---------- Emu2-Gen -----------

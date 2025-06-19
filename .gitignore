@@ -1,0 +1,9 @@
+.venv/
+evaluation/data/
+
+**/__pycache__/
+
+gemma/
+LAVIS/
+
+outputs/
